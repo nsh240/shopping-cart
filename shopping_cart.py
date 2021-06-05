@@ -1,6 +1,7 @@
 from datetime import datetime
 # TO DO: fix date and time format
 #Validation
+#fix formatting of name, price
 
 # shopping_cart.py
 
@@ -57,6 +58,9 @@ def to_usd(my_price):
 
 #Accept a user input value, store it in a variable, and print it. HINT: use the input() function
 
+product_ids=[]
+for p in products:
+    product_ids.append(str(p["id"]))
 
 selected_ids=[]
 while True:
@@ -64,8 +68,11 @@ while True:
     if selected_id == "DONE":
         break
     else:
-        selected_id=str(selected_id)
-        selected_ids.append(selected_id)
+        if str(selected_id) in product_ids:
+            selected_id=str(selected_id)
+            selected_ids.append(selected_id)
+        else:
+            print("YOu are wrong")
 print("-------------")
 print("Green Foods Grocery")
 now= datetime.now()
