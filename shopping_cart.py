@@ -50,7 +50,7 @@ for p in products:
 selected_ids=[]
 while True:
     selected_id = input("Please enter a product identifier and hit 'enter'; write 'DONE' when there are no more items: ")
-    if selected_id == "DONE":
+    if selected_id.upper() == "DONE":
         break
     else:
         if str(selected_id) in product_ids:
