@@ -57,7 +57,7 @@ while True:
             selected_id=str(selected_id)
             selected_ids.append(selected_id)
         else:
-            print("YOu are wrong")
+            print("That ID is not valid, please enter another.")
 print("-------------")
 print("NORA'S GROCERY")
 now= datetime.datetime.now()
