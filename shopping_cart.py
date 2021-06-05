@@ -1,3 +1,7 @@
+from datetime import datetime
+# TO DO: fix date and time format
+#Validation
+
 # shopping_cart.py
 
 products = [
@@ -37,5 +41,45 @@ def to_usd(my_price):
     return f"${my_price:,.2f}" #> $12,000.71
 
 
-print(products)
+##Write a program that asks the user to input one or more product identifiers, then looks up the prices for each, then prints an itemized customer receipt including the total amount owed.
+
+
+# Write a program that asks the user to input one or more product identifiers, then looks up the prices for each, then prints an itemized customer receipt including the total amount owed.
+
+# The program should use one of the provided datastores (see "Data Setup") to represent the store owner's inventory of products and prices.
+
+# The program should prompt the checkout clerk to input the identifier of each shopping cart item, one at a time.
+
+# When the clerk inputs a product identifier, the program should validate it, displaying a helpful message like "Hey, are you sure that product identifier is correct? Please try again!" if there are no products matching the given identifier.
+
+# At any time the clerk should be able to indicate there are no more shopping cart items by inputting the word DONE or otherwise indicating they are done with the process. Before asking for identifiers, the program should provide clear instructions to the user about how to use the "DONE" keyword.
+
+
+#Accept a user input value, store it in a variable, and print it. HINT: use the input() function
+
+
+selected_ids=[]
+while True:
+    selected_id = input("Please enter a product identifier; enter 'DONE' when there are no more items: ")
+    if selected_id == "DONE":
+        break
+    else:
+        selected_id=str(selected_id)
+        selected_ids.append(selected_id)
+print("-------------")
+print("Green Foods Grocery")
+now= datetime.now()
+print("CHECKOUT AT:", now)
+print("-------------")
+
+
+#create a list of matching product ids by looping through the products list and seeing if each ID is in the selected_list list.  
+matching_products=[]
+for p in products:
+    if str(p["id"]) in selected_ids:
+        matching_products.append(p)
+for product in matching_products:
+    print(product["name"], product["price"])
+
+
 
