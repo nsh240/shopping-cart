@@ -1,5 +1,4 @@
 import datetime
-#fix formatting of name, price
 
 # shopping_cart.py
 
