@@ -1,12 +1,3 @@
-# shopping-cart
-
-## 1. Set up python environment using conda create, such as:
-  
-conda create -n shopping-env python=3.8 
-conda activate shopping-env
-pip install -r requirements.txt # (after specifying desired packages inside)
-
-
 
 # shopping cart project
 This repo contains a program for ringing up groceries by typing in individual product IDs which are stored in a variable.
@@ -28,7 +19,7 @@ Install the required packages:
 pip install -r requirements.txt
 ```
 ### Configuring Environment Variables
-You can configure the local tax rate in the .env file by updating the value of the tax_rate field, as shown below
+You can configure the local tax rate in a .env file by updating the value of the tax_rate field, as shown below
 ```
 TAX_RATE=<your tax rate here as a decimal>
 ```
