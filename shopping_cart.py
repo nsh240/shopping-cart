@@ -1,4 +1,7 @@
 import datetime
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # shopping_cart.py
 
@@ -85,8 +88,9 @@ for product in matching_products:
 print("-------------")
 subtotal_sum=to_usd(sum(subtotal))
 print(f"SUBTOTAL: {subtotal_sum}")
-tax_raw=.0875*sum(subtotal)
-tax=to_usd(.0875*sum(subtotal))
+tax_from_env=float(os.environ["TAX_RATE"])
+tax_raw=tax_from_env*sum(subtotal)
+tax=to_usd(tax_from_env*sum(subtotal))
 print(f"TAX: {tax}")
 total=to_usd(sum(subtotal)+tax_raw)
 print(f"TOTAL: {total}")
