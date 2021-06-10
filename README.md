@@ -1,6 +1,6 @@
 
 # shopping cart project
-This repo contains a program for ringing up groceries by typing in individual product IDs which are stored in a variable.
+This repo contains a program for ringing up groceries by typing in individual product IDs which are stored in a CSV file located at data/products.csv.  This CSV file can be updated with the latest products.
 
 ## Installation
 Clone or download this repo onto your local computer.
@@ -23,6 +23,7 @@ You can configure the local tax rate in a .env file by updating the value of the
 ```
 TAX_RATE=<your tax rate here as a decimal>
 ```
+
 ## Usage
 To start up the shopping-cart:
 ```sh
