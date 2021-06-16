@@ -18,6 +18,8 @@ Install the required packages:
 ```sh
 pip install -r requirements.txt
 ```
+Add a products file:
+
 Add a products.csv file with your products named "products.csv" to the data folder.  The format should match the existing "default_products.csv" file currently in the data folder.  Make sure you save your file with the name "products.csv"
 ```
 
